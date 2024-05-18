@@ -115,7 +115,7 @@ header-includes:
 `$ echo` опции строка Эта команда печатает строки, которые передаются в качестве аргументов в стандартный вывод и обычно используется в сценариях оболочки для отображения сообщения или вывода результатов других команд.  
 `var1=$1` - обозначение переменных  
 var2=$2`  
-`echo "Arguments are: \$1=$var1 \$2=$var2"` - строка печати.
+"Arguments are: \$1=$var1 \$2=$var2" - строка печати.
 
 ![Задание 9](image/9.jpg){#fig:009 width=70%}
 
@@ -144,35 +144,7 @@ c_d > c да (Start)
 
 ![Задание 12](image/12.jpg){#fig:012 width=70%}
 
-```
-child=16
-adult=25
-stdout=0
 
-while [[ $stdout != 1 ]] 
-    do
-        echo "enter your name: "
-        read name
-    if [[ (-z $name) || ($name = 0) ]] ;then 
-        echo "bye"
-        stdout=1
-    elif [[ -n $name ]]; then
-        while [[ $stdout != 1 ]] ;do 
-            echo "enter your age: " 
-            read age
-            if [[ ($age -eq 0) || (-z $age) ]] ;then
-                echo "bye"
-                stdout=1
-            elif [[ $age -le $child ]] ;then 
-                echo "$name, your group is child"
-            elif [[ $age -gt $adult ]] ; then 
-                echo "$name, your group is adult" ;else
-                if [[ ($age -ge 17) && ($age -le 25) ]] ;then 
-                    echo "$name, your group is youth" ;fi
-            fi ;break
-        done ;fi
-done
-```
 
 ![Условие задания 13](image/13.jpg){#fig:013 width=70%}
 
